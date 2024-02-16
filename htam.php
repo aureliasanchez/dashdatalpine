@@ -120,6 +120,32 @@ PDCookieConsent.config({
             objeto.style.display="none";
       }
    </script>
+
+<script>
+    function mostrar(id) {
+    document.getElementById(id).classList.remove('oculto');
+    // Aquí puedes cambiar el contenido del apartado de descripción según el botón seleccionado
+    if (id === 'contenido011') {
+        document.getElementById('descripcionColoniasBaratas').classList.remove('oculto');
+        document.getElementById('descripcionColoniasCaras').classList.add('oculto');
+        document.getElementById('descripcionColoniasPredominantes').classList.add('oculto');
+    } else if (id === 'contenido012') {
+        document.getElementById('descripcionColoniasBaratas').classList.add('oculto');
+        document.getElementById('descripcionColoniasCaras').classList.remove('oculto');
+        document.getElementById('descripcionColoniasPredominantes').classList.add('oculto');
+    } else if (id === 'contenido013') {
+        document.getElementById('descripcionColoniasBaratas').classList.add('oculto');
+        document.getElementById('descripcionColoniasCaras').classList.add('oculto');
+        document.getElementById('descripcionColoniasPredominantes').classList.remove('oculto');
+    }
+}
+
+function ocultar(id) {
+    document.getElementById(id).classList.add('oculto');
+}
+
+</script>
+
    <style>
       .oculto {display:none;}
    </style>
@@ -745,29 +771,61 @@ PDCookieConsent.config({
                                                 <div >
                                                     <iframe width="672" height="415" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQHuBNh281rfcjLd6FPg9LNU-EKpcVq3hiH75-rsMn3jYhazirg3MDrzvUnUU1Lom7B8is9sbuOBr_k/pubchart?oid=1184135838&amp;format=interactive" id="contenido011"></iframe>
                                                     <iframe width="633" height="391" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQHuBNh281rfcjLd6FPg9LNU-EKpcVq3hiH75-rsMn3jYhazirg3MDrzvUnUU1Lom7B8is9sbuOBr_k/pubchart?oid=1142123945&amp;format=interactive" id="contenido012" class="oculto"></iframe>     
-                                                    <iframe width="600" height="371" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQHuBNh281rfcjLd6FPg9LNU-EKpcVq3hiH75-rsMn3jYhazirg3MDrzvUnUU1Lom7B8is9sbuOBr_k/pubchart?oid=529909825&amp;format=interactive" id="contenido013" class="oculto"></iframe>
-                                                                                                         <!--<iframe src="/puebla_property_concentration_heatmap_adjusted.html" width="800" height="500" frameborder="0" id="contenido02" class="oculto"></iframe> -->
+                                                        <iframe width="600" height="371" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQHuBNh281rfcjLd6FPg9LNU-EKpcVq3hiH75-rsMn3jYhazirg3MDrzvUnUU1Lom7B8is9sbuOBr_k/pubchart?oid=529909825&amp;format=interactive" id="contenido013" class="oculto"></iframe>                                                                                                         <!--<iframe src="/puebla_property_concentration_heatmap_adjusted.html" width="800" height="500" frameborder="0" id="contenido02" class="oculto"></iframe> -->
                                                 </div>
                                             </form>
                                         </div>
                                         <div class="px-4 py-3" style="background-color: #FAFBFE;">
                                             <h4 class="card-header__title flex m-0" >Interpretación: </h4>
-                                            <div class="text"  > Pendiente. 
+                                            <div id="descripcionColoniasBaratas" class="text oculto">
+                                                La gráfica proporciona una visión inmediata de la variabilidad de precios en el mercado inmobiliario de Tulancingo, Hidalgo, destacando las siete colonias más asequibles en la ciudad. Al observar la visualización, podemos inferir que, la barra más pequeña indica un precio promedio más bajo en la zona, mientras que el aumento en la altura de la barra refleja un incremento en los precios.  Este información no solo simplifica la identificación de opciones asequibles, sino que también sirve como base para decisiones informadas. Así, compradores potenciales, constructores y asesores de venta pueden explorar alternativas que se ajusten a sus metas financieras y preferencias específicas en Tulancingo.
                                                 <br><br>
-                                            </div>    
+                                                <div class="px-4 py-3" style="background-color: #FAFBFE;">
+                                                    <ul class="nav navbar-nav align-items-center">
+                                                        <button type="button"
+                                                                class="mr-auto"
+                                                                style="color: #000000; height: 40px; border: #FAFBFE; border-radius: 8px; padding: 5px 15px;"
+                                                                data-toggle="modal"
+                                                                data-placement="bottom"
+                                                                data-target="#modal-large-cbt">
+                                                            <i class="material-icons icon-14pt text-success">info</i> Descripción
+                                                        </button>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            
+                                            <div id="descripcionColoniasCaras" class="text oculto">
+                                                La gráfica presenta información detallada sobre los precios promedio de viviendas en las siete colonias más exclusivas de Tulancingo, Hidalgo. Cada barra incluye el nombre de la colonia y su correspondiente precio promedio. Entre más alta la barra, el precio promedio tambien es el más alto.   La visualización gráfica permite una rápida comparación entre las colonias, destacando aquellas con costos más elevados y proporcionando una perspectiva inmediata de la variabilidad en el mercado inmobiliario de Tulancingo.                                                <br><br>
+                                                <div class="px-4 py-3" style="background-color: #FAFBFE;">
+                                                    <ul class="nav navbar-nav align-items-center">
+                                                        <button type="button"
+                                                                class="mr-auto"
+                                                                style="color: #000000; height: 40px; border: #FAFBFE; border-radius: 8px; padding: 5px 15px;"
+                                                                data-toggle="modal"
+                                                                data-placement="bottom"
+                                                                data-target="#modal-large-cct">
+                                                            <i class="material-icons icon-14pt text-success">info</i> Descripción
+                                                        </button>
+                                                    </ul>
+                                                </div> 
+                                            </div>
+                                            
+                                            <div id="descripcionColoniasPredominantes" class="text oculto">
+                                                La interpretación de la tabla revela que Felipe Ángeles y Lindavista son las colonias más caras, con precios promedio de <strong>$6,860,000.00 y $5,873,265.13</strong>, respectivamente. Estas cifras indican que estas zonas representan inversiones inmobiliarias significativas. Por otro lado, colonias como La Herradura, con un precio promedio de <strong>$3,002,285.71</strong>, se perfilan como opciones más accesibles dentro de este grupo exclusivo.                                                 <br><br>
+                                                <div class="px-4 py-3" style="background-color: #FAFBFE;">
+                                                    <ul class="nav navbar-nav align-items-center">
+                                                        <button type="button"
+                                                                class="mr-auto"
+                                                                style="color: #000000; height: 40px; border: #FAFBFE; border-radius: 8px; padding: 5px 15px;"
+                                                                data-toggle="modal"
+                                                                data-placement="bottom"
+                                                                data-target="#modal-large-cpt">
+                                                            <i class="material-icons icon-14pt text-success">info</i> Descripción
+                                                        </button>
+                                                    </ul>
+                                                </div> 
+                                            </div>   
                                         </div>
-                                        <div class="px-4 py-3" style="background-color: #FAFBFE;">
-                                            <ul class="nav navbar-nav align-items-center">
-                                                <button type="button"
-                                                        class="mr-auto"
-                                                        style="color: #000000; height: 40px; border: #FAFBFE; border-radius: 8px; padding: 5px 15px;"
-                                                        data-toggle="modal"
-                                                        data-placement="bottom"
-                                                        data-target="#modal-large-mdc">
-                                                    <i class="material-icons icon-14pt text-success">info</i> Descripción
-                                                </button>
-                                            </ul>
-                                        </div> 
                                     </div>
                                 </div>
                             </div>
@@ -1990,6 +2048,89 @@ PDCookieConsent.config({
          <div class="modal-body text-left" style="color: black;">
             Representación visual del volumen total de salarios por pareja anuales, segmentados por categorías. En esencia, ilustra la distribución del ingreso neto ganado entre diversas profesiones y ocupaciones. A través de un análisis visual, somos capaces de discernir cómo se distribuye el volumen salarial en distintos estratos de ingresos. Esto nos brinda una perspectiva integral de la estructura salarial en nuestro mercado laboral.
             
+         </div>
+     </div> <!-- // END .modal-content -->
+ </div> <!-- // END .modal-dialog -->
+</div> 
+<!-- App Settings FAB -->
+
+  <!-- Volumen del mercado salarial de parejas -->
+  <div id="modal-large-cbt"
+  class="modal fade"
+  tabindex="-1"
+  role="dialog"
+  aria-labelledby="modal-large-title"
+  aria-hidden="true">
+ <div class="modal-dialog modal-dialog-centered modal-lg"
+      role="document">
+     <div class="modal-content">
+         <div class="modal-header justify-content-center align-items-center"> 
+             <div class="text-align"
+                 id="modal-large-title">Descripción</div>
+             <button type="button"
+                     class="close"
+                     data-dismiss="modal"
+                     aria-label="Close">
+                 <span aria-hidden="true">&times;</span>
+             </button>
+         </div> <!-- // END .modal-header -->
+         <div class="modal-body text-left" style="color: black;">
+            La gráfica proporciona una visión inmediata de la variabilidad de precios en el mercado inmobiliario de Tulancingo, Hidalgo, destacando las siete colonias más asequibles en la ciudad. Al observar la visualización, podemos inferir que, la barra más pequeña indica un precio promedio más bajo en la zona, mientras que el aumento en la altura de la barra refleja un incremento en los precios.  Este información no solo simplifica la identificación de opciones asequibles, sino que también sirve como base para decisiones informadas. Así, compradores potenciales, constructores y asesores de venta pueden explorar alternativas que se ajusten a sus metas financieras y preferencias específicas en Tulancingo.            
+         </div>
+     </div> <!-- // END .modal-content -->
+ </div> <!-- // END .modal-dialog -->
+</div> 
+<!-- App Settings FAB -->
+
+  <!-- Volumen del mercado salarial de parejas -->
+  <div id="modal-large-cct"
+  class="modal fade"
+  tabindex="-1"
+  role="dialog"
+  aria-labelledby="modal-large-title"
+  aria-hidden="true">
+ <div class="modal-dialog modal-dialog-centered modal-lg"
+      role="document">
+     <div class="modal-content">
+         <div class="modal-header justify-content-center align-items-center"> 
+             <div class="text-align"
+                 id="modal-large-title">Descripción</div>
+             <button type="button"
+                     class="close"
+                     data-dismiss="modal"
+                     aria-label="Close">
+                 <span aria-hidden="true">&times;</span>
+             </button>
+         </div> <!-- // END .modal-header -->
+         <div class="modal-body text-left" style="color: black;">
+            La gráfica presenta información detallada sobre los precios promedio de viviendas en las siete colonias más exclusivas de Tulancingo, Hidalgo. Cada barra incluye el nombre de la colonia y su correspondiente precio promedio. Entre más alta la barra, el precio promedio tambien es el más alto.   La visualización gráfica permite una rápida comparación entre las colonias, destacando aquellas con costos más elevados y proporcionando una perspectiva inmediata de la variabilidad en el mercado inmobiliario de Tulancingo.            
+         </div>
+     </div> <!-- // END .modal-content -->
+ </div> <!-- // END .modal-dialog -->
+</div> 
+<!-- App Settings FAB -->
+  <!-- Volumen del mercado salarial de parejas -->
+  <div id="modal-large-cpt"
+  class="modal fade"
+  tabindex="-1"
+  role="dialog"
+  aria-labelledby="modal-large-title"
+  aria-hidden="true">
+ <div class="modal-dialog modal-dialog-centered modal-lg"
+      role="document">
+     <div class="modal-content">
+         <div class="modal-header justify-content-center align-items-center"> 
+             <div class="text-align"
+                 id="modal-large-title">Descripción</div>
+             <button type="button"
+                     class="close"
+                     data-dismiss="modal"
+                     aria-label="Close">
+                 <span aria-hidden="true">&times;</span>
+             </button>
+         </div> <!-- // END .modal-header -->
+         <div class="modal-body text-left" style="color: black;">
+            Esta representación gráfica porcentual ofrece una visión clara de las colonias predominantes en el mercado inmobiliario de Tulancingo, facilitando la toma de decisiones informadas. Cada barra detalla el nombre de la colonia junto con su respectivo porcentaje con respecto al total de propiedades en la región. Este conjunto de datos nos proporciona una perspectiva visual y muestra la participación de cada colonia como una fracción del panorama total            
          </div>
      </div> <!-- // END .modal-content -->
  </div> <!-- // END .modal-dialog -->

@@ -4,7 +4,36 @@ if (!isset($_SESSION['login']) || $_SESSION['login'] !== TRUE) {
     header("location: index.php");
     exit();
 }
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    // Recopila los datos del formulario
+    $nombreEmpresa = $_POST["nombre_empresa"];
+    $areaInforme = $_POST["area_informe"];
+    $interesPlataforma = $_POST["interes_plataforma"];
+    $informacionAdicional = $_POST["informacion_adicional"];
+    $recomendaciones = $_POST["recomendaciones"];
+    $clasificacionSegmento = $_POST["clasificacion_segmento"];
+
+    // Construye el cuerpo del correo electrónico
+    $mensaje = "Nombre de la Empresa: $nombreEmpresa\n";
+    $mensaje .= "Área que ocupa el informe: $areaInforme\n";
+    $mensaje .= "Interés en la plataforma: $interesPlataforma\n";
+    $mensaje .= "Información Adicional: $informacionAdicional\n";
+    $mensaje .= "Recomendaciones: $recomendaciones\n";
+    $mensaje .= "Clasificación de Segmento: $clasificacionSegmento\n";
+
+    // Configura el destinatario y asunto del correo electrónico
+    $destinatario = "contactoteseodata@gmail.com";
+    $asunto = "Nuevo formulario de Encuesta de Satisfaccion DatAlpine";
+
+    // Envía el correo electrónico
+    mail($destinatario, $asunto, $mensaje);
+
+    // Puedes redirigir al usuario a una página de confirmación
+    header("Location: /dashboard/confrimacion.html");
+    exit();
+}
 ?>
+
 <!DOCTYPE html>
 <html lang="es"
       dir="ltr">
@@ -148,6 +177,32 @@ if (!isset($_SESSION['login']) || $_SESSION['login'] !== TRUE) {
                                     </div>
                                 </li>
                             </ul>
+                            <ul class="nav navbar-nav d-none d-sm-flex border-left navbar-height align-items-center">
+                                <li class="nav-item dropdown">
+                                    <a href="#account_menu"
+                                       class="nav-link dropdown-toggle"
+                                       data-toggle="dropdown"
+                                       data-caret="false">
+                                        <div class="avatar avatar-xs"
+                                            style="width: 32px; height: 32px;">
+                                            <span class="avatar-title rounded-circle">AD</span>
+                                        </div>
+                                    </a>
+                                    <div id="account_menu"
+                                         class="dropdown-menu dropdown-menu-right">
+                                        <div class="dropdown-item-text dropdown-item-text--lh">
+                                            <div><strong>Administrador</strong></div>
+                                            <div class="text-muted">@admin</div>
+                                        </div>
+                                        <div class="dropdown-divider"></div>
+                                        <a class="dropdown-item"
+                                           href="edit-account.php"><i class="material-icons">account_circle</i> Mi perfil</a>
+                                        <div class="dropdown-divider"></div>
+                                        <a class="dropdown-item" href="logout.php"><i class="material-icons">exit_to_app</i> Cerrar sesión</a>
+                                    </div>
+                                </li>
+                            </ul>
+
                         </div>
                     </div>
 
@@ -163,6 +218,64 @@ if (!isset($_SESSION['login']) || $_SESSION['login'] !== TRUE) {
                      data-push
                      data-responsive-width="992px">
                     <div class="mdk-drawer-layout__content page">
+                        <div class="container-fluid page__container">
+                            <div class="row">
+                                <div class="col-lg-8">
+                                    <div class="card">
+                                        <div class="form-group px-3 py-3">
+                                            <h1 class="m-0">Encuesta de Satisfaccion Suscriptores</h1>
+                                            <!--<div class="text">Copy</div> <br>-->
+                                            <div class="flex">
+                                                <div class="row px-3 card-form__body card-body">
+                                                <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
+        <!-- Pregunta 1: Nombre de la Empresa -->
+        <label for="nombre_empresa">Nombre de la Empresa:</label>
+        <input type="text" name="nombre_empresa" required><br>
+
+        <!-- Pregunta 2: Área que ocupa el informe -->
+        <label for="area_informe">Área que ocupa el informe:</label>
+        <select name="area_informe" required>
+            <option value="Mercadotecnia">Mercadotecnia</option>
+            <option value="Comercial">Comercial</option>
+            <option value="Direccion_General">Direccion General</option>
+            <option value="Arquitectura">Arquitectura</option>
+            <option value="Otro">Otro</option>
+        </select><br>
+
+        <!-- Pregunta 3: Interés en la plataforma -->
+        <label>¿Qué graficas o información proporcionada dentro de nuestra plataforma fue de tu interés?</label>
+        <input type="text" name="interes_plataforma" required><br>
+
+        <!-- Pregunta 4: Información adicional a visualizar -->
+        <label>¿Qué información adicional te gustaría visualizar?</label>
+        <input type="text" name="informacion_adicional" required><br>
+
+        <!-- Pregunta 5: Recomendación de funcionalidades -->
+        <label>Recomendación de funcionalidades de nuestra plataforma</label>
+        <input type="text" name="recomendaciones" required><br>
+
+        <!-- Pregunta 6: Clasificación de segmento -->
+        <label>¿De qué clasificación de segmento deseas tu informe inmobiliario?</label>
+        <select name="clasificacion_segmento" required>
+            <option value="A">A</option>
+            <option value="B">B</option>
+            <option value="C">C</option>
+            <option value="D">D</option>
+            <option value="E">E</option>
+            <option value="S">S</option>
+        </select><br>
+
+        
+        <input type="submit" value="Enviar">
+    </form>
+                                                </div>
+                                                
+                                            </div><br>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                     <!-- // END drawer-layout__content -->
                     <div class="mdk-drawer  js-mdk-drawer"

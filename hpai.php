@@ -361,8 +361,7 @@ PDCookieConsent.config({
                                         </div>
 
                                         <p style="text-align: center;">
-                                            <img src="/dashboard/assets/images/Untitled (3).png" width="100%">
-                                        <div class="card-header bg-white d-flex align-items-center">
+                                            <iframe width="842" height="371" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vRqKMlaBySYAMInSrOC4_pGVF2AjYAwvDNmFREBke-ma1b5wwqw7kofTI5ukUQqw0nWl_sPIoEWX9RH/pubchart?oid=1580670798&amp;format=interactive"></iframe>                                        <div class="card-header bg-white d-flex align-items-center">
                                         </div>
                                         <div class="px-4 py-3" style="background-color: #FAFBFE;">
                                             <h4 class="card-header__title flex m-0">Descripción: </h4>
@@ -386,9 +385,9 @@ PDCookieConsent.config({
                                         </div>
 
                                         <p style="text-align: center;">
-                                            <img src="/dashboard/assets/images/Untitled (4).png" width="100%">
-                                        <div class="card-header bg-white d-flex align-items-center">
-                                        </div>
+                                            <iframe width="729" height="371" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vRqKMlaBySYAMInSrOC4_pGVF2AjYAwvDNmFREBke-ma1b5wwqw7kofTI5ukUQqw0nWl_sPIoEWX9RH/pubchart?oid=1880405318&amp;format=interactive"></iframe>                                        <div class="card-header bg-white d-flex align-items-center">
+                                        
+                                            </div>
                                         <div class="px-4 py-3" style="background-color: #FAFBFE;">
                                             <h4 class="card-header__title flex m-0">Descripción: </h4>
                                             <div class="text">Este análisis de distribución de precios ofrece una visión clara de la composición del mercado en Pachuca, destacando la prevalencia de propiedades asequibles y de gama media. También apunta a la existencia de un mercado de gama alta más exclusivo, aunque estas propiedades son menos comunes. Esta información es crucial para comprender la dinámica del mercado y las oportunidades de inversión potenciales, especialmente para enfocarse en segmentos de precios específicos.
@@ -398,8 +397,8 @@ PDCookieConsent.config({
                                                     <li><strong>Segmento de Mercado de Alto Nivel:</strong> A medida que nos movemos hacia rangos de precios más altos, el porcentaje de propiedades disminuye. El rango de <strong>4M a 5M</strong> de pesos abarca el <strong>6.90%</strong> del mercado, y el rango de <strong>5M a 6M</strong> de pesos incluye alrededor del <strong>3.46%</strong>.</li>
                                                     <li><strong>Propiedades de Lujo:</strong> Las propiedades con precios superiores a 9M de pesos representan una pequeña fracción del mercado, señalando un segmento limitado pero distintivo de propiedades de lujo.</li>
                                                 </ul>
-                                                <img src="/dashboard/assets/images/Untitled (5).png" width="100%">
-                                                <div>
+                                                <iframe width="899" height="410" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vRqKMlaBySYAMInSrOC4_pGVF2AjYAwvDNmFREBke-ma1b5wwqw7kofTI5ukUQqw0nWl_sPIoEWX9RH/pubchart?oid=1130565477&amp;format=interactive"></iframe>                                                <div>
+                                                    <iframe width="968" height="371" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vRqKMlaBySYAMInSrOC4_pGVF2AjYAwvDNmFREBke-ma1b5wwqw7kofTI5ukUQqw0nWl_sPIoEWX9RH/pubchart?oid=1056809329&amp;format=interactive"></iframe>
                                                     <ul><li><h5>Precio Promedio de la Propiedad por Número de Habitaciones (de 1 a 5)</h5></li></ul>
                                                 <p>En Pachuca, el precio promedio de la propiedad muestra una tendencia variada a medida que aumenta el número de habitaciones. Para propiedades con dos habitaciones, hay una disminución de aproximadamente el **20.34%** en comparación con aquellas de una habitación. Sin embargo, esta tendencia se invierte para propiedades de tres habitaciones, que muestran un aumento significativo del **56.98%** en comparación con las propiedades de dos habitaciones. La tendencia continúa con propiedades de cuatro habitaciones, que son **47.41%** más caras que las de tres habitaciones. El aumento es más modesto para las propiedades de cinco habitaciones, mostrando un aumento del **4.19%** sobre las propiedades de cuatro habitaciones. Estas cifras destacan una clara preferencia del mercado por propiedades de tres y cuatro habitaciones, que se consideran más valiosas, probablemente debido a su idoneidad para familias o segmentos de mercado de mayor nivel.</p>
                                                 </div>
@@ -429,8 +428,7 @@ PDCookieConsent.config({
                                                 <div>
                                                 <ul><li><h5>'Colonias' Activas en el Mercado Inmobiliario de Pachuca</h5></li></ul>
                                                     <div class="text">El primer gráfico ofrece una imagen reveladora del paisaje inmobiliario de Pachuca, mostrando la distribución de la actividad del mercado a través de varias colonias. Al presentar los datos en términos de porcentaje del total de anuncios, obtenemos una perspectiva comparativa clara. Colonias como "centro" dominan el mercado, representando una proporción significativa de los anuncios, lo que podría indicar una alta demanda de propiedades en estas áreas. Esto también sugiere una concentración de la vitalidad del mercado en el núcleo de la ciudad, posiblemente impulsada por el atractivo de las comodidades urbanas y las oportunidades de empleo. Sin embargo, es crucial considerar que la alta actividad también puede resultar en un mercado competitivo para los compradores y podría indicar un mercado de alquiler saturado, factores que deben ser evaluados por inversores potenciales o aquellos que consideren ingresar al mercado.
-                                                    <img src="/dashboard/assets/images/Untitled (6).png" width="100%">
-                                                    </div>
+                                                        <iframe width="953" height="371" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vRqKMlaBySYAMInSrOC4_pGVF2AjYAwvDNmFREBke-ma1b5wwqw7kofTI5ukUQqw0nWl_sPIoEWX9RH/pubchart?oid=2072686811&amp;format=interactive"></iframe>                                                                                                       </div>
                                                 </div>
                                                 <div>
                                                     <ul><li><h5>'Colonias' de Alto Potencial en Pachuca </h5></li></ul>
@@ -448,7 +446,7 @@ PDCookieConsent.config({
                                                         </ul>
                                                     </div>
                                                     <p>El gráfico ilumina la naturaleza premium de ciertas colonias, como "club de golf" y "valle del sol", donde los precios promedio superan la marca de 5 millones de pesos. Estas cifras sugieren un segmento inmobiliario de alto nivel en estas áreas, probablemente caracterizado por amenidades de lujo, propiedades más grandes y demografías más acaudaladas. Para inversores o desarrolladores, estos son los distritos donde las estrategias de mercado de gama alta podrían ser más efectivas.</p>
-                                                    <img src="/dashboard/assets/images/Untitled (7).png" width="100%">
+                                                    <iframe width="884" height="394" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vRqKMlaBySYAMInSrOC4_pGVF2AjYAwvDNmFREBke-ma1b5wwqw7kofTI5ukUQqw0nWl_sPIoEWX9RH/pubchart?oid=318249545&amp;format=interactive"></iframe>                                                
                                                 </div>
                                                 <div>
                                                     <ul><li><h5>Las Mejores 'Colonias' para Inversión en Pachuca </h5></li></ul>
@@ -468,8 +466,7 @@ PDCookieConsent.config({
                                         </div>
 
                                         <p style="text-align: center;">
-                                            <img src="/dashboard/assets/images/Untitled (8).png" width="100%">
-                                        <div class="card-header bg-white d-flex align-items-center">
+                                            <iframe width="707" height="371" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vRqKMlaBySYAMInSrOC4_pGVF2AjYAwvDNmFREBke-ma1b5wwqw7kofTI5ukUQqw0nWl_sPIoEWX9RH/pubchart?oid=1979155317&amp;format=interactive"></iframe>                                        <div class="card-header bg-white d-flex align-items-center">
                                         </div>
                                         <div class="px-4 py-3" style="background-color: #FAFBFE;">
                                             <h4 class="card-header__title flex m-0">Descripción: </h4>
@@ -505,7 +502,7 @@ PDCookieConsent.config({
                                         </div>
 
                                         <p style="text-align: center;">
-                                        <img src="/dashboard/assets/images/Untitled (1).png" width="100%">                                        <div class="card-header bg-white d-flex align-items-center">
+                                            <iframe width="600" height="371" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vRqKMlaBySYAMInSrOC4_pGVF2AjYAwvDNmFREBke-ma1b5wwqw7kofTI5ukUQqw0nWl_sPIoEWX9RH/pubchart?oid=1213986408&amp;format=interactive"></iframe>                                        <div class="card-header bg-white d-flex align-items-center">
                                         </div>
                                         <div class="px-4 py-3" style="background-color: #FAFBFE;">
                                             <h4 class="card-header__title flex m-0">Descripción: </h4>
@@ -636,8 +633,7 @@ PDCookieConsent.config({
                                                     
                                                 </div>
                                                 <div class="card-header bg-white d-flex align-items-center">
-                                                    <img src="/dashboard/assets/images/Untitled (2).png" width="100%">
-                                                </div>
+                                                    <iframe width="790" height="371" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vRqKMlaBySYAMInSrOC4_pGVF2AjYAwvDNmFREBke-ma1b5wwqw7kofTI5ukUQqw0nWl_sPIoEWX9RH/pubchart?oid=1689774406&amp;format=interactive"></iframe>                                                </div>
                                                 <div>
                                                     <p>El gráfico de barras anterior representa visualmente el Índice de Atractivo de Inversión para las 10 principales 'Colonias' en Pachuca. Este índice es una medida compuesta que se ha construido para proporcionar una cifra integral que refleja varios factores importantes para un inversor:</p>
                                                     <ul>

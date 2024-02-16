@@ -4,7 +4,35 @@ if (!isset($_SESSION['login']) || $_SESSION['login'] !== TRUE) {
     header("location: index.php");
     exit();
 }
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    // Recopila los datos del formulario
+    $nombreEmpresa = $_POST["nombre_empresa"];
+    $areaInforme = $_POST["area_informe"];
+    $interesPlataforma = $_POST["interes_plataforma"];
+    $informacionAdicional = $_POST["informacion_adicional"];
+    $recomendaciones = $_POST["recomendaciones"];
+    $clasificacionSegmento = $_POST["clasificacion_segmento"];
 
+    // Construye el cuerpo del correo electrónico
+    $mensaje = "Nombre de la Empresa: $nombreEmpresa\n";
+    $mensaje .= "Área que ocupa el informe: $areaInforme\n";
+    $mensaje .= "Interés en la plataforma: $interesPlataforma\n";
+    $mensaje .= "Información Adicional: $informacionAdicional\n";
+    $mensaje .= "Recomendaciones: $recomendaciones\n";
+    $mensaje .= "Clasificación de Segmento: $clasificacionSegmento\n";
+
+    // Configura el destinatario y asunto del correo electrónico
+    $destinatario = "aureliasancheze5@gmail.com";
+    $asunto = "Nuevo formulario enviado de Encuesta de Satisfaccion DatAlpine";
+
+    // Envía el correo electrónico
+    mail($destinatario, $asunto, $mensaje);
+
+    // Puedes redirigir al usuario a una página de confirmación
+    header("Location: /dashboard/inicio.php");
+    exit();
+}
+?>
 
 <!DOCTYPE html>
 <html lang="es"

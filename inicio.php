@@ -344,6 +344,7 @@ PDCookieConsent.config({
                                                                 <option value="hidalgo">Hidalgo</option>
                                                                 <option value="puebla">Puebla</option>
                                                                 <option value="queretaro">Querétaro</option>
+                                                                <option value="jalisco">Jalisco</option>
                                                                 <!--<option value="queretaro">Querétaro</option>-->
                                                             </select>
                                                         </div>
@@ -357,6 +358,8 @@ PDCookieConsent.config({
                                                                 <option value="tulancingo" data-estado="hidalgo">Tulancingo</option>
                                                                 <option value="puebla" data-estado="puebla">Puebla</option>
                                                                 <option value="queretaro" data-estado="queretaro">Santiago de Querétaro</option>
+                                                                <option value="jalisco" data-estado="puertov">Puerto Vallarta</option>
+
                                                                  <!-- <option value="queretaro">Querétaro</option> -->
                                                             </select>
                                                         </div>
@@ -395,7 +398,7 @@ PDCookieConsent.config({
                                                         <img src="assets/iconos/valor-agregado.svg">
                                                     </div>
                                                     <div class="d-flex justify-content-center pb-3">
-                                                        <div class="text-center"><strong>Valuación</strong></div>
+                                                        <div class="text-center"><strong>Explorador de valuación y precios</strong></div>
                                                     </div>
                                                 </div>
                                             </div>
@@ -618,7 +621,7 @@ PDCookieConsent.config({
                                                         <div class="d-flex align-items-middle">
                                                             <div style="color: #6773DF;" class="text-15pt" >Jalisco</div> <div class="text px-1" ></div>
                                                         </div>
-                                                        <small class="text-muted">Próximamente</small>
+                                                        <small class="text-muted">Ya disponible</small>
                                                     </div>
                                                     <i class="material-icons icon-muted ml-3">arrow_forward</i>
                                                 </div>
@@ -1683,7 +1686,8 @@ PDCookieConsent.config({
             // Lógica de búsqueda real
             if ((estadoSeleccionado === 'hidalgo' && (ciudadSeleccionada === 'tulancingo' || ciudadSeleccionada === 'pachuca')) ||
                 (estadoSeleccionado === 'puebla' && ciudadSeleccionada === 'puebla') ||
-                (estadoSeleccionado === 'queretaro' && ciudadSeleccionada === 'queretaro')) {
+                (estadoSeleccionado === 'queretaro' && ciudadSeleccionada === 'queretaro'))
+                (estadoSeleccionado === 'jalisco' && ciudadSeleccionada === 'puertov') {
                 // Construye la clave para buscar en el mapa
                 var clave = estadoSeleccionado + '_' + ciudadSeleccionada;
 
@@ -1698,7 +1702,9 @@ PDCookieConsent.config({
 
                     //Querétaro
                     'queretaro_queretaro': 'qqam.php',
-                    // Agrega más combinaciones según sea necesario
+
+                    // Jalisco
+                    'jalisco_puertov': 'jpim.php',
                 };
 
                 // Busca la URL correspondiente en el mapa

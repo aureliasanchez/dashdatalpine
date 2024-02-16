@@ -213,7 +213,9 @@ if (!isset($_SESSION['login']) || $_SESSION['login'] !== TRUE) {
                                     <a class="text d-flex" style="color: #6774DF;" href="Suscripcion.php">Plan y facturación</a>  <br>
                                     <a class="text d-flex" style="color: #6774DF;" href="#">Notificaciones</a>  <br>
                                     <a class="text d-flex" style="color: #6774DF;" href="#">Equipo</a>  <br>
-                                    <a class="text d-flex" style="color: #6774DF;" href="#">Encuesta de Satisfaccion</a>  <br>
+                                    <a class="text d-flex" style="color: #6774DF;" href="/dashboard/encuestasus.php">Encuesta de Satisfacción</a>  <br>
+                                    <a class="text d-flex" style="color: #6774DF;" href="/dashboard/encuestaval.php">Encuesta de Valuación</a>  <br>
+
                                 </div>
                                 <div class="col-lg-8">
                                     <div class="card">

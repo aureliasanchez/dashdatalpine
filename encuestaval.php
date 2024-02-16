@@ -4,7 +4,47 @@ if (!isset($_SESSION['login']) || $_SESSION['login'] !== TRUE) {
     header("location: index.php");
     exit();
 }
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    // Recopila los datos del formulario
+    $email = $_POST["email"];
+    $nombreEmpresa = $_POST["nombre_empresa"];
+    $propiedadEspecifica = $_POST["propiedad_especifica"];
+    $caracteristicasPropiedad = $_POST["caracteristicas_propiedad"];
+    $ubicacion = $_POST["ubicacion"];
+    $metrosCuadrados = $_POST["metros_cuadrados"];
+    $banos = $_POST["banos"];
+    $metrosConstruccion = $_POST["metros_construccion"];
+    $numeroRecamaras = $_POST["numero_recamaras"];
+    $estacionamientos = $_POST["estacionamientos"];
+    $precio = $_POST["precio"];
+    $archivo = $_POST["archivo"];
 
+    // Construye el cuerpo del correo electrónico
+    $mensaje = "Nombre de la Empresa: $nombreEmpresa\n";
+    $mensaje .= "Propiedad Especifica: $propiedadEspecifica\n";
+    $mensaje .= "Caracteristicas de la Propiedad: $caracteristicasPropiedad\n";
+    $mensaje .= "Ubicacion: $ubicacion\n";
+    $mensaje .= "Metros Cuadrados totales: $metrosCuadrados\n";
+    $mensaje .= "Banos: $banos\n";
+    $mensaje .= "Metros Cuadrados de Construccion: $metrosConstruccion\n";
+    $mensaje .= "Numero de recamaras: $numeroRecamaras\n";
+    $mensaje .= "Estacionamiento: $estacionamientos\n";
+    $mensaje .= "Precio: $precio\n";
+    $mensaje .= "Archivo: $archivo\n";
+
+
+    // Configura el destinatario y asunto del correo electrónico
+    $destinatario = "contactoteseodata@gmail.com";
+    $asunto = "Nuevo formulario de Encuesta de Valuacion DatAlpine";
+
+    // Envía el correo electrónico
+    mail($destinatario, $asunto, $mensaje);
+
+    // Puedes redirigir al usuario a una página de confirmación
+    header("Location: /dashboard/confrimacion.html");
+    exit();
+}
+?>
 
 <!DOCTYPE html>
 <html lang="es"
@@ -190,23 +230,84 @@ if (!isset($_SESSION['login']) || $_SESSION['login'] !== TRUE) {
                      data-push
                      data-responsive-width="992px">
                     <div class="mdk-drawer-layout__content page">
+                        <div class="container-fluid page__container">
+                            <div class="row">
+                                <div class="col-lg-8">
+                                    <div class="card">
+                                        <div class="form-group px-3 py-3">
+                                            <h1 class="m-0">Encuesta de Valuacion</h1>
+                                            <!--<div class="text">Copy</div> <br>-->
+                                            <div class="flex">
+                                                <div class="row px-3 card-form__body card-body">
+                                                    <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
+                                                        <label for="email">Correo Electronico: *</label><br>
+                                                        <input type="email" name="Email" required><br><br>
+                                                
+                                                        <label for="nombre_empresa">Nombre de la Empresa:</label>
+                                                        <input type="text" name="nombre_empresa" required><br>
+                                                
+                                                        <label for="propiedad_especifica">Propiedad Específica (si existe URL): *</label><br>
+                                                        <input type="text" name="propiedad_especifica" required><br><br>
+                                                
+                                                        <label for="caracteristicas_propiedad">Características de la Propiedad (si no hay URL): *</label><br>
+                                                        <input type="text" name="caracteristicas_propiedad" required><br><br>
+                                                
+                                                        <label for="ubicacion">Ubicación</label><br>
+                                                        <input type="text" name="ubicacion" required><br><br>
 
-                        <div style="padding-bottom: calc(5.125rem / 2); position: relative; margin-bottom: 1.5rem;">
-                            <div class="bg-primary"
-                                 style="min-height: 150px;">
-                                <div class="d-flex align-items-end container-fluid page__container"
-                                     style="position: absolute; left: 0; right: 0; bottom: 0;">
-                                    <div class="avatar avatar-xl">
-                                        <span class="avatar-title">AD</span>     
+                                                        <label for="metros_cuadrados">Metros Cuadrados Totales: </label><br>
+                                                        <input type="text" name="metros_cuadrados"><br><br>
+
+                                                        <label for="banos">Banos:</label>
+                                                        <select name="banos" required>
+                                                            <option value="1">1</option>
+                                                            <option value="2">2</option>
+                                                            <option value="3">3</option>
+                                                            <option value="4">4</option>
+                                                            <option value="Otro">Otro</option>
+                                                        </select><br>
+                                                
+                                                        <label for="metros_construccion">Metros Cuadrados de Construcción: </label><br>
+                                                        <input type="text" name="metros_construccion"><br><br>
+                                                
+                                                        <label for="recamaras">Recamaras:</label>
+                                                        <select name="recamaras" required>
+                                                            <option value="1">1</option>
+                                                            <option value="2">2</option>
+                                                            <option value="3">3</option>
+                                                            <option value="4">4</option>
+                                                            <option value="Otro">Otro</option>
+                                                        </select><br>
+
+                                                        <label for="estacionamientos">Estacionamiento:</label>
+                                                        <select name="estacionamientos" required>
+                                                            <option value="1">1</option>
+                                                            <option value="2">2</option>
+                                                            <option value="3">3</option>
+                                                            <option value="4">4</option>
+                                                            <option value="Otro">Otro</option>
+                                                        </select><br>
+                                                        
+                                                
+                                                        <label for="precio">Precio: </label><br>
+                                                        <input type="number" name="precio" min="1"><br><br>
+                                                
+                                                        <label for="archivo">Si ya tiene toda esta información en un documento, puede enviarlo aquí,<br>
+                                                            sin necesidad de contestar las anteriores preguntas</label><br><br>
+                                                        <input type="file" name="archivo"><br><br>
+                                                
+                                                        <input type="submit" value="Enviar"><br><br>
+                                                
+                                                        <!-- <input type="hidden" name="_next" value="./satisfaccion.php">
+                                                                                                        <input type="hidden" name="_captcha" value="false"> -->
+                                                    </form>
+                                                </div>
+                                                
+                                            </div><br>
+                                        </div>
                                     </div>
-                                    
                                 </div>
                             </div>
-                        </div>
-
-                        <div class="container-fluid page__container">
-                            <h2><i class="fas fa-check-circle text-success"></i> Gracias, por enviar tu información. <br>Hemos recibido tus datos correctamente.</h2>
-                            <h2>Te estaremos contactando</h2>
                         </div>
                     </div>
                     <!-- // END drawer-layout__content -->
